@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FISIO GLORIA | Fisioterapia Motora e Reabilitação</title>
+    <style>
+        /* Estilos Gerais */
+        :root {
+            --azul-escuro: #1a3a5a;
+            --azul-claro: #3498db;
+            --branco: #ffffff;
+            --cinza-claro: #f4f7f6;
+            --texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--texto);
+            scroll-behavior: smooth;
+        }
+
+        /* Menu de Navegação */
+        header {
+            background: var(--branco);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--azul-escuro);
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--azul-escuro);
+            font-weight: 500;
+        }
+
+        /* Banner Principal */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 90, 0.8), rgba(26, 58, 90, 0.8)), 
+                        url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1350&q=80'); /* Imagem de Fisioterapia */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .btn-agendar {
+            background: var(--azul-claro);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .btn-agendar:hover { background: #2980b9; }
+
+        /* Seções */
+        section { padding: 80px 10% 20px; }
+        h2 { color: var(--azul-escuro); text-align: center; margin-bottom: 40px; }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--cinza-claro);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid var(--azul-claro);
+        }
+
+        /* Formulário de Agendamento */
+        .agendamento-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            background: var(--azul-escuro);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { display: none; } /* Simplicidade para o exemplo */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">FISIO GLORIA</a>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#tratamentos">Tratamentos</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#agendamento">Agendamentos</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero" style="padding: 0;">
+        <h1>Recupere seu movimento, retome sua vida.</h1>
+        <p>Especialistas em Fisioterapia Motora e Reabilitação Personalizada.</p>
+        <br>
+        <a href="#agendamento" class="btn-agendar">Agendar Avaliação</a>
+    </section>
+
+    <section id="tratamentos">
+        <h2>Fisioterapia Motora Detalhada</h2>
+        <div class="servicos-grid">
+            <div class="card">
+                <h3>O que é?</h3>
+                <p>A Fisioterapia Motora foca na restauração das funções físicas comprometidas por lesões, doenças ou cirurgias, devolvendo a mobilidade e a independência.</p>
+            </div>
+            <div class="card">
+                <h3>Processo de Reabilitação</h3>
+                <ul>
+                    <li>Avaliação Cinético-Funcional</li>
+                    <li>Plano de fortalecimento muscular</li>
+                    <li>Treino de equilíbrio e marcha</li>
+                    <li>Terapia manual avançada</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" style="background-color: var(--cinza-claro);">
+        <h2>Sobre a FISIO GLORIA</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>A FISIO GLORIA nasceu de um propósito claro: oferecer uma fisioterapia que une ciência, tecnologia e um olhar humano. Nossa missão é celebrar cada movimento recuperado e cada conquista rumo à saúde plena.</p>
+        </div>
+    </section>
+
+    <section id="agendamento">
+        <h2>Solicite seu Agendamento</h2>
+        <div class="agendamento-form">
+            <form action="#">
+                <label>Nome Completo</label>
+                <input type="text" placeholder="Seu nome aqui" required>
+                
+                <label>WhatsApp</label>
+                <input type="tel" placeholder="(00) 00000-0000" required>
+                
+                <label>Tipo de Tratamento</label>
+                <select>
+                    <option>Fisioterapia Motora</option>
+                    <option>Pós-Operatório</option>
+                    <option>Fisioterapia Neurológica</option>
+                    <option>Outros</option>
+                </select>
+
+                <label>Mensagem/Observações</label>
+                <textarea rows="4" placeholder="Conte brevemente o que você está sentindo"></textarea>
+
+                <button type="submit" class="btn-agendar" style="border: none; width: 100%; cursor: pointer;">Enviar Pedido de Agendamento</button>
+            <div class="agendamento-form" style="text-align: center;">
+    <p>Clique no botão abaixo para agendar sua consulta via WhatsApp. Retornamos em poucos minutos!</p>
+    <a href="https://wa.me/55021993979445?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20FISIO%20GLORIA." 
+       target="_blank" 
+       class="btn-agendar" 
+       style="display: inline-block; background-color: #25d366; border: none;">
+       Agendar pelo WhatsApp
+    </a>
+</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FISIO GLORIA - Todos os direitos reservados.</p>
+        <p>Endereço: Rua da Reabilitação, 123 - Sua Cidade/UF</p>
+    </footer>
+
+</body>
+</html>
